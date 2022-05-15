@@ -1,0 +1,26 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+//Trocado as varíaveis para o SQL, pois sera usado o SQL para acessar o banco de dados em prod
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+//Modelo Prisma de criação de BD
+//@id Primery Key / String? parametro opcional
+//@@map ("feedbacks") - Nome da tabela no banco de dados
+//Int @default(autoincrement()) - Autoincremento de ID / (uuid()) Gerador de ID único
+
+model Feedback {
+  id         String  @id @default(uuid())
+  type       String
+  comment    String
+  screenshot String?
+
+  @@map("feedbacks")
+}
