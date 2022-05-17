@@ -15,7 +15,7 @@ describe('Submit feedback', () => {
     await expect(submitFeedback.submit({
       type: 'BUG',
       comment:'Deu pau vei',
-      screenshot: 'data:image/png;base64,sodosd'
+      screenshot: 'data:image/png;base64,fdffddg'
     })).resolves.not.toThrow()
 
     expect(createFeedbackSpy).toHaveBeenCalled()
