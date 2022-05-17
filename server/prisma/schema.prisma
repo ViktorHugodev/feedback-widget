@@ -7,7 +7,7 @@ generator client {
 
 //Trocado as varíaveis para o SQL, pois sera usado o SQL para acessar o banco de dados em prod
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
