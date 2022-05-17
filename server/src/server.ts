@@ -8,6 +8,6 @@ app.use(express.json())
 app.use(routes)
 
 //Cria a porta em que daria acesso, no caso a porta 3333
-app.listen(3333, () => {
+app.listen(process.env.PORT || 3333, () => {
   console.log('listening onn port 3333')
 })
