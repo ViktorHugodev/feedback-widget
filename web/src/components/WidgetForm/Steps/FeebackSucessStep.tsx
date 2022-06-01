@@ -26,11 +26,13 @@ export function FeedbackSucessStep({handleRestartFeedback }: setFeedbackSucessPr
             fill="white"
           />
         </svg>
-        <span className="text-xl mt-2">Agradecemos o feedback!</span>
+        <span className="text-xl mt-2 dark:text-neutral-200 text-neutral-800" >Agradecemos o feedback!</span>
         <button 
         onClick={handleRestartFeedback}
         type="button"
         className="bg-zinc-800 rounded-md py-2 px-6 mt-6 border-transparent text-sm 
+
+        dark:text-neutral-200
         leading-6 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900
         focus:ring-brand-500 transition-colors duration-300">Quero enviar outro</button>
       </div>
