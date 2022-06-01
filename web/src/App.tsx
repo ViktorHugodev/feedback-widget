@@ -1,10 +1,14 @@
 import { useState } from 'react'
+import { Header } from './components/Header'
 import { Widget } from './components/Widget'
 
 function App() {
 
   return (
-    <Widget/>
+    <>
+        <Header />
+        <Widget/>
+    </>
   )
 }
 

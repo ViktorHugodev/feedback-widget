@@ -56,7 +56,8 @@ export function FeedbackContentStep({
         <textarea
         onChange={event => setComment(event.target.value)}
         value={comment}
-          className="min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100
+          className="min-w-[304px] w-full min-h-[112px] text-sm placeholder-slate-900 text-slate-800
+           dark:placeholder-zinc-400 dark:text-zinc-100
         border-zinc-600 bg-transparent p-2 rounded-md focus:border-brand-500 focus:ring-1
         focus:outline-none resize-none scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent"
           placeholder="Conte com detalhes o que esta acontecendo..."
