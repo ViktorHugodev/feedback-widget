@@ -20,9 +20,10 @@ export function ToggleButton() {
 
   function handleDarkMode(){
     setIsDarkMode(!isDarkMode);
+    console.log(localStorage.theme)
   }
   return (
-    <div className='ml-auto' >
+    <div className='absolute right-8 top-8' >
 
     <button onClick={handleDarkMode} className='w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center'>
 

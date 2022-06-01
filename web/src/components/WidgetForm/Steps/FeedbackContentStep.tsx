@@ -40,9 +40,9 @@ export function FeedbackContentStep({
           onClick={handleRestartFeedback}
           className="absolute top-5 left-5 text-zinc-400 hover:text-zinc-100"
         >
-          <ArrowLeft />
+          <ArrowLeft className='text-slate-600 dark:text-slate-300' />
         </button>
-        <span className="text-xl leading-6 flex items-center gap-2">
+        <span className="text-xl leading-6 flex items-center gap-2 text-slate-700 dark:text-slate-300">
           <img
             src={feedbackTypeInfo.image.source}
             alt={feedbackTypeInfo.image.alt}
@@ -66,7 +66,7 @@ export function FeedbackContentStep({
         <ScreenShotButton setScreenShotImage={setScreenShotImage} screenShotImage={screenShotImage}/>
           <button
              disabled={comment.length === 0 || isSendingFeedback}
-            className="p-2 bg-brand-500 rounded-md border-transparent flex-1 flex justify-center items-center
+            className="text-slate-300 p-2 bg-brand-500 rounded-md border-transparent flex-1 flex justify-center items-center
             text-sm hover:bg-brand-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900
             focus:ring-brand-500 transition-colors duration-300 disabled:opacity-50 disabled:hover:bg-brand-500"
             type="submit"

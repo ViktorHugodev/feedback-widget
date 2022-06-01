@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply dark:bg-slate-200 dark:text-slate-800 bg-[#09090A] text-zinc-100
+  @apply bg-slate-200 dark:text-slate-800 dark:bg-[#09090A] text-zinc-100
 }

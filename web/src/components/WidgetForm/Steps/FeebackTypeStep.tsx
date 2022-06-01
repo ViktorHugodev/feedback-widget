@@ -8,7 +8,7 @@ export function FeedbackTypeStep({ setFeedbackType }: setFeedbackType) {
   return (
     <>
       <header>
-        <span className='text-xl leading-6'>Deixe seu feedback</span>
+        <span className='text-xl leading-6 dark:text-violet-200 text-violet-800'>Deixe seu feedback</span>
         <CloseButton />
       </header>
       <div className='flex py-8 gap-2 w-full'>
@@ -23,7 +23,7 @@ export function FeedbackTypeStep({ setFeedbackType }: setFeedbackType) {
       focus:border-brand-500 focus:outline-none'
             >
               <img src={value.image.source} alt={value.image.alt} />
-              <span>{value.title}</span>
+              <span className='dark:text-neutral-200 text-neutral-800' >{value.title}</span>
             </button>
           );
         })}

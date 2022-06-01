@@ -36,15 +36,7 @@ export type FeedbackType = keyof typeof feedbackTypes;
 // Limita a seleção da tipagem apenas a key. Caso não tivesse o "keyof", a tipagem seria geral.
 //A ideia aqui é tipar apenas a KEY do objeto pro useState
 export function WidgetForm() {
-  if (
-    localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
+
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null);
   const [feedbackSent, setFeedbackSent] = useState<boolean>(false);
   function handleRestartFeedback() {
@@ -53,8 +45,8 @@ export function WidgetForm() {
   }
   return (
     <div
-      className='bg-slate-100 dark:bg-zinc-900 p-4 relative rounded-2xl mb-4 flex flex-col 
-      items-center 
+      className='bg-slate-300 dark:bg-zinc-900 p-4 relative rounded-2xl mb-4 flex flex-col 
+      items-center border-2 border-transparent hover:border-slate-700 dark:hover:border-brand-500
     shadow-lg w-[calc(100vw-2rem)] md:w-auto'
     >
   
@@ -74,7 +66,7 @@ export function WidgetForm() {
         </>
       )}
 
-      <footer className='text-xs text-neutral-400 '>
+      <footer className='text-xs text-neutral-800 dark:text-neutral-400 '>
         Feito com ♥ por{' '}
         <a
           className='underline underline-offset-2'
@@ -82,7 +74,6 @@ export function WidgetForm() {
         >
           Victor
         </a>
-        <ToggleButton />
       </footer>
     </div>
   );
